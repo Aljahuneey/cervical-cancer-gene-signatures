@@ -1,3 +1,71 @@
+# Analysis of Cervical Cancer Gene Expression Profiles: A Bioinformatics-Based Study
+
+This repository contains the R scripts, pipelines, and data processing workflows used to perform the transcriptomic analysis and generate the findings in this study:
+
+**Analysis of cervical cancer gene expression profiles: Bioinformatics based study**  
+Yahya Hassan Ibrahim, Murtala Mohammed Jibril, Umar Ahmad.  
+*Research Square Preprint (2026)*; DOI: [https://doi.org/10.21203/rs.3.rs-10695486/v1](https://doi.org/10.21203/rs.3.rs-10695486/v1)
+
+---
+
+## Workflow Overview
+
++---------------------------------+
+|  NCBI GEO Dataset: GSE63514     |
+|  (128 samples / GPL570 platform)|
++---------------------------------+
+|
+v
++---------------------------------+
+|   Differential Expression       |
+|   Analysis via limma            |
++---------------------------------+
+|
+v
++---------------------------------+
+| Extract 155 DEGs                |
+| (|log2FC| > 1, adj. p < 0.05)   |
++---------------------------------+
+|
+v
++---------------------------------+
+| Functional Enrichment           |
+| (GO Biological Processes & KEGG)|
++---------------------------------+
+|
+v
++---------------------------------+
+| PPI Network Construction        |
+| & Hub Gene Extraction           |
+| (CDKN2A, CXCR4, CRNN, SPINK5,   |
+|  GBP6, IFI44)                   |
++---------------------------------+
+
+Data Availability
+​Our microarray transcriptomic data were retrieved from the Gene Expression Omnibus (GEO) under accession number GSE63514 (Affymetrix Human Genome U133 Plus 2.0 Array platform GPL570).
+​Please cite our Research Square Preprint (https://doi.org/10.21203/rs.3.rs-10695486/v1) if you use our scripts, data, or findings in your work.
+
+​Key Hub Genes Identified
+​The pipeline identified 6 key biomarker hub genes encoding critical regulatory proteins in cervical cancer progression:
+​CDKN2A
+​CXCR4
+​CRNN
+​SPINK5
+​GBP6
+​IFI44
+
+​Directory Index & Scripts
+​All R scripts required to reproduce this analysis from raw data to figure generation are organized as follows:
+​Data Acquisition & Differential Expression:
+​01_download_GSE63514.R – Download and parse GEO microarray data via GEOquery.
+​02_limma_deg_analysis.R – Differential expression profiling using limma.
+​Enrichment & Network Analysis:
+​03_functional_enrichment.R – GO and KEGG pathway enrichment profiling.
+​04_ppi_hub_genes.R – Construct PPI network and extract core hub genes.
+
+​License
+​This project is licensed under the Apache 2.0 License - see the LICENSE file for details.
+
 # cervical-cancer-gene-signatures
 Bioinformatics analysis of GSE63514 identifying 155 DEGs and 6 core hub genes (CRNN, SPINK5, GBP6, IFI44, CDKN2A, CXCR4) in cervical cancer. Features functional enrichment (GO/KEGG) and PPI network profiling to uncover novel diagnostic biomarkers and precision therapeutic targets.
 R script from GEO2R
