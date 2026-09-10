@@ -10,51 +10,20 @@ Yahya Hassan Ibrahim, Murtala Mohammed Jibril, Umar Ahmad.
 
 ## Workflow Overview
 
-+---------------------------------+
-|  NCBI GEO Dataset: GSE63514     |
-|  (128 samples / GPL570 platform)|
-+---------------------------------+
-|
-v
-+---------------------------------+
-|   Differential Expression       |
-|   Analysis via limma            |
-+---------------------------------+
-|
-v
-+---------------------------------+
-| Extract 155 DEGs                |
-| (|log2FC| > 1, adj. p < 0.05)   |
-+---------------------------------+
-|
-v
-+---------------------------------+
-| Functional Enrichment           |
-| (GO Biological Processes & KEGG)|
-+---------------------------------+
-|
-v
-+---------------------------------+
-| PPI Network Construction        |
-| & Hub Gene Extraction           |
-| (CDKN2A, CXCR4, CRNN, SPINK5,   |
-|  GBP6, IFI44)                   |
-+---------------------------------+
-
 ```mermaid
 flowchart TD
-    A["NCBI GEO Dataset: GSE63514<br/>(128 samples / GPL570 platform)"] --> B["Differential Expression Analysis<br/>(limma in R)"]
+    A["NCBI GEO Dataset: GSE63514<br/>(128 samples / GPL570 platform)"] --> B["Differential Expression Analysis via limma"]
     B --> C["Extract 155 DEGs<br/>(|log2FC| > 1, adj. p < 0.05)"]
-    C --> D["Functional Enrichment Analysis<br/>(GO Biological Processes & KEGG)"]
+    C --> D["Functional Enrichment<br/>(GO Biological Processes & KEGG)"]
     D --> E["PPI Network Construction & Hub Gene Extraction<br/>(CDKN2A, CXCR4, CRNN, SPINK5, GBP6, IFI44)"]
-<img width="408" height="316" alt="20260910_164321" src="https://github.com/user-attachments/assets/a247bad8-120f-478b-84ad-abe4f86c60b9" />
-<img width="720" height="698" alt="20260910_164645" src="https://github.com/user-attachments/assets/3545dadb-5485-451c-91be-b235973ddef8" />
-<img width="386" height="252" alt="20260910_164713" src="https://github.com/user-attachments/assets/4f3c11b4-f32e-4eed-a7da-4f622ec90414" />
-<img width="371" height="295" alt="20260910_164733" src="https://github.com/user-attachments/assets/f6b7b701-b473-474c-899e-92c5f69a8b52" />
+<img width="408" height="316" alt="20260910_164321" src="[https://github.com/user-attachments/assets/a247ba](https://github.com/user-attachments/assets/a247ba)" />
+<img width="720" height="698" alt="20260910_164645" src="[https://github.com/user-attachments/assets/3545da](https://github.com/user-attachments/assets/3545da)" />
+<img width="386" height="252" alt="20260910_164713" src="[https://github.com/user-attachments/assets/4f3c11](https://github.com/user-attachments/assets/4f3c11)" />
+<img width="371" height="295" alt="20260910_164733" src="[https://github.com/user-attachments/assets/f6b7b7](https://github.com/user-attachments/assets/f6b7b7)" />
 
-Data Availability
+​Data Availability
 ​Our microarray transcriptomic data were retrieved from the Gene Expression Omnibus (GEO) under accession number GSE63514 (Affymetrix Human Genome U133 Plus 2.0 Array platform GPL570).
-​Please cite our Research Square Preprint (https://doi.org/10.21203/rs.3.rs-10695486/v1) if you use our scripts, data, or findings in your work.
+​Please cite our Research Square Preprint if you use our scripts, data, or findings in your work.
 
 ​Key Hub Genes Identified
 ​The pipeline identified 6 key biomarker hub genes encoding critical regulatory proteins in cervical cancer progression:
